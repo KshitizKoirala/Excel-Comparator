@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    {% block header %} {% endblock %}
+  </head>
+  <body>
+    <header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">NIST 19</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="color:black;" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link mylink" href="/">Global to Global <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link mylink" href="/non-globals">Non Globals</a>
+            <a class="nav-item nav-link mylink" href="/boid">Batch ID</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% include 'includes/_messages.html'%}
+    {% block body %} {% endblock %}
+
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='custom.js') }}"></script>
+  </body>
+</html>

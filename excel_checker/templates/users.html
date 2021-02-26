@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="container mt-1">
+        <h1>Existing users</h1>
+        <table>
+            {% if users %}
+                <tr style="text-align: center;">
+                    <th>Full Name</th>
+                    <th>BOID</th>
+                    <th>UCC CODE</th>
+                    <th>CLIENT CODE</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.boid }}</td>
+                    <td>{{ user.ucc_code }}</td>
+                    <td>{{ user.client_code }}</td>
+                </tr>
+                {%endfor%}
+                {% else %}
+                    <h5 style="color: red;">No Users Found</h5>
+            {% endif %}
+        </table>
+    </section>
+{% endblock %}

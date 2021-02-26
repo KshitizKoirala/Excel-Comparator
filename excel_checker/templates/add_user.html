@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <title>Add User</title>
+{% endblock %}
+
+{% block body %}
+<section class="container mt-5">
+  <h1 class="pb-4">Add a User</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form action="" method="POST">
+    <div class="form-group">
+      {{render_field(form.fullname, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.branch, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.boid, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.phoneNumber, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.ucc_code, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.client_code, class_="form-control")}}
+    </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+  
+{% endblock %}
+
+</section> 

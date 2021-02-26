@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="table_content">
+    <div class="successful_transfers">
+        <h3>Successful Transfers</h3>
+        <div class="transfer_table">
+            {% for table in successful_table %}
+                {{ table|safe }}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="invalid_files">
+        <h3>Failed Transfers</h3>
+        <div class="transfer_table ">
+            {% for table in failed_table %}
+                {{ table|safe }}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

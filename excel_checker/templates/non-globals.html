@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% if bank_error %}
+<h3 style="text-align: center; color: red;">An Unexpected Error Occured "{{bank_error}}" </h3>
+{% endif %}
+{%if file_error %}
+<h3 style="text-align: center; color: red;">An Unexpected Error Occured "{{file_error}}" </h3>
+{% endif %}
+
+
+<section class="container mt-1 p-2">
+    <h1 class="breadcrumb">Upload Excel</h1>
+        {% from "includes/_formhelpers.html" import render_field %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+            {{render_field(form.BankExcel, class_="form-control")}}
+        </div>
+        
+            <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+        </form>
+    </section>
+{% endblock %}

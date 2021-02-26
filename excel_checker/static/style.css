@@ -1,0 +1,38 @@
+.table_content {
+  text-align: center;
+}
+
+.successful_transfers {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.successful_transfers h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.invalid_files {
+  margin: 5rem 0 2rem 0;
+}
+
+.transfer_table table thead tr {
+  text-align: center !important;
+  padding: 1rem !important;
+}
+
+.transfer_table .dataframe {
+  width: 70%;
+  margin: 0 auto;
+}
+
+table tr td,
+th {
+  border: 1px solid black;
+  min-width: 25vh;
+  min-height: 25vh;
+}
+
+.mylink.active {
+  text-decoration: underline;
+}

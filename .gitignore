@@ -1,0 +1,5 @@
+.env
+venv/
+ExcelFiles/
+__pycache__
+excel_checker/Client List.xlsx
