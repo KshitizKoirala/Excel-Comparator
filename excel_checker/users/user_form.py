@@ -13,4 +13,4 @@ class addUserForm(Form):
 
 # Excel input form
 class input_excel(Form):
-    BankExcel = FileField('Global to Global Bank Excel File Upload')
+    BankExcel = FileField('Global to Non Global Bank Excel File Upload')
