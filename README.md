@@ -10,4 +10,3 @@ Create an ExcelFiles Folder
 1) SET Up your database credentials from the .env.example file to .env
 2) Activate the virtual environment and install the dependencies.
 3) FLASK RUN
-
